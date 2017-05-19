@@ -116,7 +116,7 @@ If the `.htaccess` file that ships with Laravel does not work with your Apache i
 If you are using Nginx, the following directive in your site configuration will direct all requests to the `index.php` front controller:
 
     location / {
-        try_files $uri $uri/ /index.php?$query_string;
+        try_files $uri $uri/ /index.php?$is_args$args;
     }
 
 Of course, when using [Homestead](/docs/{{version}}/homestead) or [Valet](/docs/{{version}}/valet), pretty URLs will be automatically configured.
